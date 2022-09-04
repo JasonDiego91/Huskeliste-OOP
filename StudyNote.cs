@@ -2,7 +2,7 @@
 {
     internal class StudyNote:SharedData
     {
-        public string GetLength()
+        public string GetLengthOfJob()
         {
             return Length.ToString("hh:mm");
         }

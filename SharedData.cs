@@ -6,11 +6,11 @@
         public string? Creator { get; set; }
         public string? Description { get; set; }
         public DateTime Length { get; set; }
-        public DateTime ReleaseDate { get; set; } = DateTime.Today;
+        public DateTime Getdate { get; set; } = DateTime.Today;
 
-        public string GetReleaseDate()
+        public string GetDate()
         {
-            return ReleaseDate.ToString("D");
+            return Getdate.ToString("D");
         }
 
     }

@@ -10,7 +10,7 @@ namespace Huskeliste
         private string path = @"c:\HuskelisteData.json";
         public Gui()
         {
-            //data.NoteList.Add(new Note() {"Title="Homework", Desicription ="Have to buy milk!", ReleaseDate=new DateTime(1988,5,25), Length=new DateTime(1,1,1, 1, 42, 0)});
+            
             while (true)
             {
                 Menu();
@@ -180,7 +180,7 @@ namespace Huskeliste
         //STUDY MENU
         private void StudyNoteMenu()
         {
-            Console.WriteLine("\nSTUDTY MENU\n1 to see list of StudyNotes\n2 to search StudyNote\n3 to add new StudyNote\n4 to save StudyNote\n5 to load StudyNote");
+            Console.WriteLine("\nSTUDY MENU\n1 to see list of Study Notes\n2 to search Study Note\n3 to add new Study Note\n4 to save Study Note\n5 to load Study Note");
 
             switch (Console.ReadKey(true).Key)
             {
@@ -217,7 +217,7 @@ namespace Huskeliste
             studynote.Creator = GetString("Creator: ");
             studynote.Description = GetString("Description: ");
             studynote.Length = GetLength();
-            studynote.ReleaseDate = GetReleaseDate();
+            studynote.Getdate = GetReleaseDate();
 
 
             ShowStudyNote(studynote);
@@ -246,7 +246,7 @@ namespace Huskeliste
         //SHOW STUDY NOTE
         private void ShowStudyNote(StudyNote s)
         {
-            Console.WriteLine($"{s.Title} {s.Creator} {s.GetLength()} {s.Description} {s.GetReleaseDate()} ");
+            Console.WriteLine($"{s.Title} {s.Creator} {s.GetLengthOfJob()} {s.Description} {s.GetDate()} ");
         }
 
 
@@ -305,7 +305,7 @@ namespace Huskeliste
             worknote.Creator = GetString("Creator: ");
             worknote.Description = GetString("Description: ");
             worknote.Length = GetLength();
-            worknote.ReleaseDate = GetReleaseDate();
+            worknote.Getdate = GetReleaseDate();
 
             ShowWorkNote(worknote);
             Console.WriteLine("Confirm adding to list (Y/N)");
@@ -332,7 +332,7 @@ namespace Huskeliste
         //SHOW WORKNOTE
         private void ShowWorkNote(WorkNote s)
         {
-            Console.WriteLine($"{s.Title} {s.Creator} {s.GetLength()} {s.Description} {s.GetReleaseDate()}");
+            Console.WriteLine($"{s.Title} {s.Creator} {s.GetLength()} {s.Description} {s.GetDate()}");
 
         }
 
@@ -390,7 +390,7 @@ namespace Huskeliste
             shoppingnote.Creator = GetString("Creator: ");
             shoppingnote.Description = GetString("Description: ");
             shoppingnote.Length = GetLength();
-            shoppingnote.ReleaseDate = GetReleaseDate();
+            shoppingnote.Getdate = GetReleaseDate();
 
             ShowShoppingNote(shoppingnote);
             Console.WriteLine("Add ShoppingNote to list? Confirm adding to list (Y/N)");
@@ -416,7 +416,7 @@ namespace Huskeliste
         // SHOW SHOPPINGNOTE
         private void ShowShoppingNote(ShoppingNote s)
         {
-            Console.WriteLine($"{s.Title} {s.Creator} {s.GetLength()} {s.Description} {s.GetReleaseDate()} ");
+            Console.WriteLine($"{s.Title} {s.Creator} {s.GetLength()} {s.Description} {s.GetDate()} ");
         }
 
         // SHOW SHOPPINGNOTE LIST
@@ -471,7 +471,7 @@ namespace Huskeliste
             homenote.Creator = GetString("Creator: ");
             homenote.Description = GetString("Description: ");
             homenote.Length = GetLength();
-            homenote.ReleaseDate = GetReleaseDate();
+            homenote.Getdate = GetReleaseDate();
 
             ShowHomeNote(homenote);
             Console.WriteLine("Add HomeNote to list? Confirm adding to list (Y/N)");
@@ -497,7 +497,7 @@ namespace Huskeliste
         // SHOW HOMENOTE
         private void ShowHomeNote(HomeNote s)
         {
-            Console.WriteLine($"{s.Title} {s.Creator} {s.GetLength()} {s.Description} {s.GetReleaseDate()} ");
+            Console.WriteLine($"{s.Title} {s.Creator} {s.GetLength()} {s.Description} {s.GetDate()} ");
         }
 
         // SHOW HOMENOTE LIST
